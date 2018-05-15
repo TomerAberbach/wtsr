@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+        <title>WTSR 91.3FM Web Player</title>
+
+        <meta name="author" content="Tomer Aberbach"/>
+        <meta name="creator" content="Tomer Aberbach"/>
+        <meta name="description" content="A web player for a trend-setting 1500-watt non-commercial educational radio station serving Mercer and Bucks County. We are fully student-run and broadcast the best and the latest in alternative and indie music, over 20 genres of specialty music, hourly news updates, and college and local sports 24 hours a day from our studios at The College of New Jersey."/>
+        <meta name="keywords" content="wtsr,91.3,tcnj,radio,fm"/>
+
+        <meta itemprop="name" content="WTSR 91.3FM Web Player"/>
+        <meta itemprop="description" content="A web player for a trend-setting 1500-watt non-commercial educational radio station serving Mercer and Bucks County. We are fully student-run and broadcast the best and the latest in alternative and indie music, over 20 genres of specialty music, hourly news updates, and college and local sports 24 hours a day from our studios at The College of New Jersey."/>
+        <meta itemprop="image" content="https://wtsr.tomeraberbach.com/img/wtsr.jpg"/>
+
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@WTSR913FM"/>
+        <meta name="twitter:title" content="WTSR 91.3FM Web Player"/>
+        <meta name="twitter:description" content="A web player for a trend-setting 1500-watt non-commercial educational radio station serving Mercer and Bucks County. We are fully student-run and broadcast the best and the latest in alternative and indie music, over 20 genres of specialty music, hourly news updates, and college and local sports 24 hours a day from our studios at The College of New Jersey."/>
+        <meta name="twitter:creator" content="@TomerADev"/>
+        <meta name="twitter:image" content="https://wtsr.tomeraberbach.com/img/wtsr.jpg"/>
+        <meta name="twitter:image:src" content="https://wtsr.tomeraberbach.com/img/wtsr.jpg"/>
+
+        <meta property="og:title" content="WTSR 91.3FM Web Player"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://wtsr.tomeraberbach.com"/>
+        <meta property="og:image" content="https://wtsr.tomeraberbach.com/img/wtsr.jpg"/>
+        <meta property="og:description" content="A web player for a trend-setting 1500-watt non-commercial educational radio station serving Mercer and Bucks County. We are fully student-run and broadcast the best and the latest in alternative and indie music, over 20 genres of specialty music, hourly news updates, and college and local sports 24 hours a day from our studios at The College of New Jersey."/>
+        <meta property="og:site_name" content="WTSR 91.3FM Web Player"/>
+
+        <link rel="stylesheet" href="css/style.css"/>
+
+        <script defer src="/__/firebase/4.12.0/firebase-app.js"></script>
+        <script defer src="/__/firebase/4.12.0/firebase-firestore.js"></script>
+        <script defer src="/__/firebase/init.js"></script>
+    </head>
+    <body>
+        <div id="play-div">
+            <img id="logo-img" src="img/wtsr.jpg"/>
+            <div id="audio-div">
+                <audio id="audio" src="http://icy3.abacast.com/wtsr-wtsrfm-64"></audio>
+                <img id="toggle-img" src="img/audio/play.svg" onclick="toggleAudio();"/>
+                <img id="volume-img" src="img/audio/volume.svg" onclick="toggleVolume();"/>
+                <input id="volume-input" title="volume" type="range" min="0" max="100" value="50" oninput="volumeChange();"/>
+            </div>
+        </div>
+
+        <div id="meta-div">
+            <div class="entry-div">
+                <img class="meta-img" src="img/meta/title.svg"/>
+                <span class="meta-span" id="title-span"></span>
+            </div>
+            <div class="entry-div">
+                <img class="meta-img" src="img/meta/artist.svg"/>
+                <span class="meta-span" id="artist-span"></span>
+            </div>
+            <div class="entry-div">
+                <img class="meta-img" src="img/meta/album.svg"/>
+                <span class="meta-span" id="album-span"></span>
+            </div>
+            <div class="entry-div" id="genre-div">
+                <img class="meta-img" src="img/meta/genre.svg"/>
+                <span class="meta-span" id="genre-span"></span>
+            </div>
+
+            <div id="external-div">
+                <a class="external-a" id="spotify-a" target="_blank">
+                    <img class="external-img" src="img/external/spotify.png"/>
+                </a>
+                <a class="external-a" id="youtube-a" target="_blank">
+                    <img class="external-img" src="img/external/youtube.png"/>
+                </a>
+                <a class="external-a" id="deezer-a" target="_blank">
+                    <img class="external-img" src="img/external/deezer.png"/>
+                </a>
+            </div>
+
+            <div class="entry-div">
+                <span class="meta-span" id="current-span"></span>
+            </div>
+            <div class="entry-div">
+                <span class="meta-span" id="next-span"></span>
+            </div>
+        </div>
+
+        <span id="about-span" tabindex="0"></span>
+        <div id="info-div">
+            <h2>WTSR 91.3FM Web Player</h2>
+            <p>A web player for a trend-setting 1500-watt non-commercial educational radio station serving Mercer and Bucks County. We are fully student-run and broadcast the best and the latest in alternative and indie music, over 20 genres of specialty music, hourly news updates, and college and local sports 24 hours a day from our studios at The College of New Jersey.</p>
+            <p>Developed by Tomer Aberbach.</p>
+            <p>Icons by JohnnyZi from The Noun Project.</p>
+            <span id="acrcloud-span">
+                <a href="https://www.acrcloud.com" target="_blank">
+                  <img src="img/acrcloud.png"/>
+                </a>
+                <p>Broadcast Monitoring by ACRCloud.</p>
+              </span>
+        </div>
+
+        <script type="text/javascript" src="js/document.js"></script>
+    </body>
+</html>
