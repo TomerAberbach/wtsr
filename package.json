@@ -1,0 +1,21 @@
+{
+  "name": "wtsr",
+  "devDependencies": {
+    "autoprefixer": "^9.0.2",
+    "cssnano": "^4.0.5",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-markdownit": "^1.0.2",
+    "gulp-postcss": "^7.0.1",
+    "gulp-real-favicon": "^0.3.0",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-webserver": "^0.9.1",
+    "markdown-it-highlightjs": "^3.0.0",
+    "markdown-it-kbd": "^1.1.1",
+    "markdown-it-sub": "^1.0.0",
+    "markdown-it-sup": "^1.0.0",
+    "markdown-it-video": "^0.6.3"
+  }
+}
