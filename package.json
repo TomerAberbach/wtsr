@@ -1,5 +1,10 @@
 {
   "name": "wtsr",
+  "author": "Tomer Aberbach <tomeraberbach@gmail.com> (https://tomeraberba.ch)",
+  "scripts": {
+    "start": "gulp",
+    "clean": "gulp clean"
+  },
   "devDependencies": {
     "autoprefixer": "^9.0.2",
     "cssnano": "^4.0.5",
